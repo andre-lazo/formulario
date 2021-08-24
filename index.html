@@ -41,6 +41,7 @@
 
  
     function validar(){
+        var bandera=false;
       var   cedula=document.getElementById("cedula").value;
     var datos=["0983552718","0983552719"];
 
@@ -48,9 +49,11 @@
       if(element==cedula)
          { 
           window.location.href="formulario.html";
-         
+         bandera=true;
+             
          }
     });
+        if(!bandera){alert("CEDULA NO INGRESADA");}
     }
   </script>
 
