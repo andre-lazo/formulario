@@ -39,30 +39,19 @@
 
 <script>
 
-  function validar(){
-    var datos="";
-  $.ajax (	{
-        	url : "cedulas.txt",
-			dataType: "text",
-			success : function (data) 
-			{
-        var cedula="";
-        cedula=document.getElementById("cedula").value;
-      
-        data.split("\n").forEach(element => {
-        
-         if(element==cedula)
-         { alert("ingreso");
+ 
+    function validar(){
+      var   cedula=document.getElementById("cedula").value;
+    var datos=["0983552718","0983552719"];
+
+    datos.forEach(element=>{
+      if(element==cedula)
+         { 
           window.location.href="formulario.html";
          
          }
-        });
-      
-     }
-		}
-	);
-  }
-    
+    });
+    }
   </script>
 
  
